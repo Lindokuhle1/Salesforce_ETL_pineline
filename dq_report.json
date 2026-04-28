@@ -1,0 +1,31 @@
+{
+  "row_count": 480,
+  "passed": true,
+  "checks": [
+    {
+      "name": "non_null_keys",
+      "passed": true,
+      "details": "Missing values across key columns: {'region': 0, 'sales_manager': 0, 'sales_rep': 0, 'month': 0, 'status': 0}"
+    },
+    {
+      "name": "valid_month_values",
+      "passed": true,
+      "details": "Invalid month values: []"
+    },
+    {
+      "name": "non_negative_metrics",
+      "passed": true,
+      "details": "Negative values by column: {'rev_target': 0, 'rev_actual': 0, 'visit_target': 0, 'visits_made': 0, 'call_target': 0, 'calls_made': 0, 'quote_target': 0, 'quotes_made': 0, 'pipeline_value': 0, 'pipeline_coverage': 0, 'ytd_actual': 0}"
+    },
+    {
+      "name": "valid_status_values",
+      "passed": true,
+      "details": "Invalid status values: []"
+    },
+    {
+      "name": "unique_sales_rep_month",
+      "passed": true,
+      "details": "Duplicate sales_rep+month rows: 0"
+    }
+  ]
+}

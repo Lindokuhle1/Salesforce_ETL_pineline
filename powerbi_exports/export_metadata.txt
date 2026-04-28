@@ -1,0 +1,7 @@
+exported_at_utc=2026-04-28T09:41:59.311151+00:00
+database=balancell_sales_analysis
+format=csv
+file=sales_detail.csv
+file=kpi_by_region.csv
+file=kpi_by_manager.csv
+file=kpi_by_month.csv

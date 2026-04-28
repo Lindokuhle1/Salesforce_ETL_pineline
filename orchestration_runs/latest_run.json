@@ -1,0 +1,47 @@
+{
+  "run_id": "20260428T094201Z",
+  "generated_at_utc": "2026-04-28T09:42:01.831959+00:00",
+  "overall_status": "success",
+  "stages": [
+    {
+      "name": "data_quality",
+      "status": "success",
+      "started_at_utc": "2026-04-28T09:41:34.458289+00:00",
+      "ended_at_utc": "2026-04-28T09:41:41.695779+00:00",
+      "duration_seconds": 7.237,
+      "message": "Data quality passed. Report: C:\\Users\\lindo\\OneDrive\\Desktop\\New folder\\SALESFORCE\\dq_report.json"
+    },
+    {
+      "name": "etl",
+      "status": "success",
+      "started_at_utc": "2026-04-28T09:41:41.696393+00:00",
+      "ended_at_utc": "2026-04-28T09:41:58.638419+00:00",
+      "duration_seconds": 16.942,
+      "message": "ETL pipeline completed successfully."
+    },
+    {
+      "name": "powerbi_export",
+      "status": "success",
+      "started_at_utc": "2026-04-28T09:41:58.639099+00:00",
+      "ended_at_utc": "2026-04-28T09:41:59.315506+00:00",
+      "duration_seconds": 0.676,
+      "message": "Power BI export completed. Output: C:\\Users\\lindo\\OneDrive\\Desktop\\New folder\\SALESFORCE\\powerbi_exports"
+    },
+    {
+      "name": "dashboard_sync",
+      "status": "success",
+      "started_at_utc": "2026-04-28T09:41:59.315718+00:00",
+      "ended_at_utc": "2026-04-28T09:41:59.351911+00:00",
+      "duration_seconds": 0.036,
+      "message": "Dashboard data synced to C:\\Users\\lindo\\OneDrive\\Desktop\\New folder\\SALESFORCE\\sales-dashboard\\public\\data. Files: ['sales_detail.csv', 'kpi_by_region.csv', 'kpi_by_manager.csv', 'kpi_by_month.csv', 'export_metadata.txt']"
+    },
+    {
+      "name": "manager_report",
+      "status": "success",
+      "started_at_utc": "2026-04-28T09:41:59.352441+00:00",
+      "ended_at_utc": "2026-04-28T09:42:01.829173+00:00",
+      "duration_seconds": 2.477,
+      "message": "Manager reports generated: Excel=C:\\Users\\lindo\\OneDrive\\Desktop\\New folder\\SALESFORCE\\reports\\manager_performance_report.xlsx, HTML=C:\\Users\\lindo\\OneDrive\\Desktop\\New folder\\SALESFORCE\\reports\\manager_performance_report.html"
+    }
+  ]
+}
