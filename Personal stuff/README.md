@@ -1,4 +1,4 @@
-# Balancell Sales Performance — ETL Pipeline
+#   Sales Performance — ETL Pipeline
 
 A Python ETL pipeline that extracts sales KPI data from Excel, transforms it into a normalized relational model, loads it into PostgreSQL, and exposes a flat view ready for Power BI reporting.
 
@@ -38,9 +38,9 @@ pip install pandas sqlalchemy psycopg2-binary openpyxl
 Run the following SQL in pgAdmin or psql to create the target database and schema before running the pipeline.
 
 ```sql
-CREATE DATABASE balancell_sales_analysis;
+CREATE DATABASE  _sales_analysis;
 
-\c balancell_sales_analysis
+\c  _sales_analysis
 
 CREATE TABLE IF NOT EXISTS regions (
     id   SERIAL PRIMARY KEY,
@@ -96,7 +96,7 @@ The pipeline reads all connection settings from **environment variables**. If a 
 | `INPUT_FILE` | `sales_performance_v2.xlsx` | Source Excel filename (relative to script) |
 | `PG_HOST` | `127.0.0.1` | PostgreSQL host |
 | `PG_PORT` | `5432` | PostgreSQL port |
-| `PG_DATABASE` | `balancell_sales_analysis` | Target database |
+| `PG_DATABASE` | ` _sales_analysis` | Target database |
 | `PG_USER` | `postgres` | Database user |
 | `PG_PASSWORD` | *(your password)* | Database password |
 | `PG_BOOTSTRAP_DB` | `postgres` | Admin database used to create the target DB if missing |
@@ -106,7 +106,7 @@ The pipeline reads all connection settings from **environment variables**. If a 
 ```powershell
 $env:PG_HOST     = "127.0.0.1"
 $env:PG_PORT     = "5432"
-$env:PG_DATABASE = "balancell_sales_analysis"
+$env:PG_DATABASE = " _sales_analysis"
 $env:PG_USER     = "postgres"
 $env:PG_PASSWORD = "your_password_here"
 ```
@@ -303,7 +303,7 @@ regions
 Connect Power BI to PostgreSQL and import the view:
 
 ```
-Database: balancell_sales_analysis
+Database:  _sales_analysis
 Object:   vw_powerbi_sales_performance
 ```
 
@@ -356,7 +356,7 @@ On Track % =
 
 - **Full reload** — every run truncates all four tables and reloads from source, preserving referential integrity.
 - **Auto schema creation** — tables are created with `CREATE TABLE IF NOT EXISTS` on every run.
-- **Auto database creation** — if `balancell_sales_analysis` does not exist, the pipeline creates it automatically via the bootstrap database.
+- **Auto database creation** — if ` _sales_analysis` does not exist, the pipeline creates it automatically via the bootstrap database.
 - **Special characters in passwords** — handled safely via SQLAlchemy `URL.create()`.
 
 ---
