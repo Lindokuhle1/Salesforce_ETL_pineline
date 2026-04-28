@@ -1,8 +1,8 @@
 # Infrastructure Document
-## Balancell Sales Performance ETL and BI Platform
+##   Sales Performance ETL and BI Platform
 
 ## 1. Purpose
-This document describes the technical infrastructure for the Balancell sales performance solution built with Python ETL, PostgreSQL, and Power BI. It is intended for interview discussion, handover, and operational reference.
+This document describes the technical infrastructure for the   sales performance solution built with Python ETL, PostgreSQL, and Power BI. It is intended for interview discussion, handover, and operational reference.
 
 The platform now includes a full orchestration layer with automated data quality validation, ETL load, and Power BI dataset export — all coordinated by a single entry-point runner with a structured run summary output.
 
@@ -55,7 +55,7 @@ Out of scope:
       v                 v
 +---------------------+-----------------------------+
 | Source Data         | PostgreSQL                  |
-| sales_performance   | DB: balancell_sales_analysis|
+| sales_performance   | DB:  _sales_analysis|
 | _v2.xlsx            | Tables:                     |
 |                     | - regions                   |
 | 480 rows            | - sales_managers            |
@@ -108,7 +108,7 @@ Environment variables used by ETL:
 - INPUT_FILE (default: sales_performance_v2.xlsx)
 - PG_HOST (default: 127.0.0.1)
 - PG_PORT (default: 5432)
-- PG_DATABASE (default: balancell_sales_analysis)
+- PG_DATABASE (default:  _sales_analysis)
 - PG_USER (default: postgres)
 - PG_PASSWORD (required in production)
 - PG_BOOTSTRAP_DB (default: postgres)
@@ -178,7 +178,7 @@ Load strategy:
 
 ## 10. Reliability and Recovery
 ### 10.1 Backup Strategy
-- Daily logical backup of balancell_sales_analysis using pg_dump
+- Daily logical backup of  _sales_analysis using pg_dump
 - Weekly full backup retention snapshot
 - Keep backup retention aligned with business policy (for example 30-90 days)
 
@@ -302,7 +302,7 @@ This section has been renumbered to 15. The Power BI setup guide is now Section 
 3. Search for **PostgreSQL** and select it, then click **Connect**
 4. Fill in the connection dialog:
    - **Server:** `127.0.0.1`
-   - **Database:** `balancell_sales_analysis`
+   - **Database:** ` _sales_analysis`
 5. Click **OK**
 6. When prompted for credentials:
    - Select the **Database** tab on the left
@@ -313,7 +313,7 @@ This section has been renumbered to 15. The Power BI setup guide is now Section 
 ---
 
 ### Step 3 — Select tables or view to import
-In the **Navigator** window you will see all objects in `balancell_sales_analysis`.
+In the **Navigator** window you will see all objects in ` _sales_analysis`.
 
 **Option A — Use the flat view (easiest, recommended for this report)**
 - Tick `vw_powerbi_sales_performance`
@@ -446,7 +446,7 @@ How to add conditional formatting to a matrix:
 ---
 
 ### Step 9 — Save and share
-1. **File → Save As** → save as `Balancell_Sales_Performance.pbix`
+1. **File → Save As** → save as ` _Sales_Performance.pbix`
 2. Static sharing: **File → Export → Export to PDF**
 3. Live sharing: Publish to Power BI Service and share the workspace link with stakeholders
 
