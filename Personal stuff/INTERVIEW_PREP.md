@@ -1,4 +1,4 @@
-# Balancell Interview Prep Notes
+#   Interview Prep Notes
 **Interview Date:** 28 April 2026  
 **Task:** Sales Performance ETL Pipeline + Power BI Report
 
@@ -11,7 +11,7 @@
 **Your answer framework:**
 1. **Extracted** raw KPI data from Excel (480 records, 21 columns, 40 sales reps across 5 regions)
 2. **Transformed** it into a normalized relational model with proper foreign keys
-3. **Loaded** it into PostgreSQL (`balancell_sales_analysis`) — 4 tables + 1 Power BI view
+3. **Loaded** it into PostgreSQL (` _sales_analysis`) — 4 tables + 1 Power BI view
 4. **Delivered** a flat reporting view (`vw_powerbi_sales_performance`) ready to connect directly in Power BI
 
 **Key decisions to mention:**
@@ -96,7 +96,7 @@ regions (5 rows)         ← master list of sales territories
 
 ### How would you connect Power BI to PostgreSQL?
 1. Home → Get Data → PostgreSQL database
-2. Enter server: `127.0.0.1` and database: `balancell_sales_analysis`
+2. Enter server: `127.0.0.1` and database: ` _sales_analysis`
 3. Select `vw_powerbi_sales_performance` or individual tables
 4. Load or Transform as needed
 
@@ -200,7 +200,7 @@ Revenue Attainment % =
 | Sales managers | 5 |
 | Sales reps | 40 |
 | Months covered | 12 (Jan–Dec) |
-| PostgreSQL database | balancell_sales_analysis |
+| PostgreSQL database |  _sales_analysis |
 | Tables | regions, sales_managers, sales_reps, sales_perfomance |
 | Power BI object | vw_powerbi_sales_performance |
 | Python libraries | pandas, sqlalchemy, psycopg2-binary, openpyxl |
